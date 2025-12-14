@@ -7,7 +7,7 @@ const tempreatureDisplay = document.getElementById("tempreature")
 const discriptionDisplay = document.getElementById('discription')
 const errorMessage = document.getElementById("error-message")
 
-const API_KEY = '1b4be0da30c543e62fec33d18935622b';
+const API_KEY = 'Your api key';
 getWeatherBtn.addEventListener('click',async() =>{
     const city = cityInput.value.trim()
     if(!city) return
