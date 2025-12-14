@@ -7,7 +7,7 @@ const tempreatureDisplay = document.getElementById("tempreature")
 const discriptionDisplay = document.getElementById('discription')
 const errorMessage = document.getElementById("error-message")
 
-const API_KEY = 'Your api key';
+const API_KEY = '1b4be0da30c543e62fec33d18935622b';
 getWeatherBtn.addEventListener('click',async() =>{
     const city = cityInput.value.trim()
     if(!city) return
@@ -22,9 +22,9 @@ getWeatherBtn.addEventListener('click',async() =>{
 
 async function fetchWeatherData(city){
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
-    console.log(typeof response)
+    
     console.log("RESPONSE", response  )
-    if(!response.ok){
+    if(!response?.ok){
         throw new Error('Network response was not ok')
     }
     const data = await response.json()
